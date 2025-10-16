@@ -1,0 +1,33 @@
+/* Custom Font and Base Background */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fb;
+}
+
+/* Add a subtle fade-in animation for smooth entry */
+#app {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: smoother button transition */
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Improve focus outline for accessibility */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #1c4e80;
+}
