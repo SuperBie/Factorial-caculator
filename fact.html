@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Factorial Generator</title>
 
-  <!-- Load Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -20,14 +19,12 @@
     }
   </script>
 
-  <!-- Link external CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="min-h-screen flex items-center justify-center p-4">
 
   <div id="app" class="w-full max-w-lg bg-white shadow-xl rounded-2xl p-6 md:p-10 border border-gray-100">
-    <!-- Header -->
     <h1 class="text-3xl font-extrabold text-primary-blue mb-2 text-center">
       Factorial Calculator
     </h1>
@@ -35,7 +32,6 @@
       Enter a non-negative integer to calculate its factorial.
     </p>
 
-    <!-- Input Section -->
     <div class="space-y-4">
       <label for="numberInput" class="block text-sm font-medium text-gray-700">
         Input Number (n)
@@ -56,7 +52,6 @@
       </button>
     </div>
 
-    <!-- Result Display -->
     <div id="resultContainer" class="mt-8 pt-6 border-t border-secondary-gray">
       <h2 class="text-xl font-semibold text-gray-700 mb-4">
         Result
@@ -66,7 +61,6 @@
       </div>
       <div id="meta" class="mt-2 text-sm text-gray-600"></div>
 
-      <!-- Citation/Tip Box -->
       <div id="tipBox" class="mt-4 p-3 text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-200">
         <span class="font-bold text-primary-blue">Remember:</span> Factorials are the product of all positive integers up to the number denoted (5! = 5 × 4 × 3 × 2 × 1 = 120). Also, 0! = 1.
       </div>
@@ -74,7 +68,6 @@
   </div>
 
   <script>
-    // BigInt factorial (async with progress)
     function factorial(n) {
       if (n === 0) return 1n;
       let result = 1n;
@@ -162,7 +155,7 @@
         tipBoxElement.innerHTML = `<span class="font-bold text-primary-blue">Preview:</span> ${head} … ${tail}`;
         } else {
         outputElement.textContent = `${num}! = ${str}`;
-        tipBoxElement.innerHTML = `<span class="font-bold text-primary-blue">Remember:</span> Factorials are the product of all positive integers up to $n$ ($5! = 5 × 4 × 3 × 2 × 1 = 120$). Also, $0! = 1$.`;
+        tipBoxElement.innerHTML = `<span class="font-bold text-primary-blue">Remember:</span> Factorials are the product of all positive integers up to $n$ ($5! = 5 × 4 × 3 × 2 × 1 = 120$). Also, 0! = 1.`;
         }
 
         metaElement.textContent = `Digits: ${digits.toLocaleString()} | Time: ${(end - start).toFixed(0)} ms`;
