@@ -1,4 +1,3 @@
-/* Custom Font and Base Background */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f7f9fb;
@@ -21,13 +20,12 @@ body {
   }
 }
 
-/* Optional: smoother button transition */
 button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Improve focus outline for accessibility */
 input:focus {
   outline: none;
   box-shadow: 0 0 0 2px #1c4e80;
 }
+
